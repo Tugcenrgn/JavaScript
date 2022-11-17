@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="upload-box">
+        <input type="file" accept="image/*" hidden>
+        <img
+          src="https://cdn3d.iconscout.com/3d/premium/thumb/upload-5590549-4652664.png"
+          alt="" />
+        <p>Browse File to Upload</p>
+      </div>
+
+      <div class="content">
+        <div class="row sizes">
+          <div class="col width">
+            <label>Width</label>
+            <input type="number" />
+          </div>
+          <div class="col height">
+            <label>Height</label>
+            <input type="number" />
+          </div>
+        </div>
+        <div class="row checkboxes">
+          <div class="col ratio">
+            <input type="checkbox" id="ratio" checked/>
+            <label for="ratio">Lock aspect ratio</label>
+          </div>
+          <div class="col quality">
+            <input type="checkbox" id="quality"/>
+            <label for="quality">Reduce quality</label>
+          </div>
+        </div>
+
+        <button class="download-btn">Download Image</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

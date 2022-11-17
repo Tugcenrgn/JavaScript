@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+.upload-box img {
+  width: 70px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #8cc0de;
+}
+
+.wrapper {
+  width: 450px;
+  background: #fff;
+  height: 288px;
+  padding: 30px;
+  border-radius: 10px;
+  transition: height 0.2s ease;
+}
+
+.wrapper.active{
+    height: 537px;
+}
+
+.wrapper .upload-box {
+  height: 225px;
+  border: 2px dashed #afafaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wrapper.active .upload-box {
+  border: none;
+}
+
+.upload-box p {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+.wrapper.active .upload-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.wrapper.active .upload-box p {
+  display: none;
+}
+
+.wrapper .content {
+  opacity: 0;
+  margin-top: 30px;
+  pointer-events: none;
+}
+
+.wrapper.active .content{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.content .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content .row .col {
+  width: calc(100% / 2 - 15px);
+}
+
+.row .col label {
+  font-size: 1rem;
+}
+
+.sizes .col input {
+  width: 100%;
+  height: 35px;
+  outline: none;
+  border-radius: 5px;
+  margin-top: 8px;
+  padding: 0 15px;
+  font-size: 1rem;
+  border: 1px solid #afafaf;
+}
+
+.sizes .col input:focus {
+  padding: 0 13px;
+  border: 2px solid #8cc0de;
+}
+
+.content .checkboxes {
+  margin-top: 20px;
+}
+.checkboxes .col {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxes .col input {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  accent-color: #8cc0de;
+}
+
+.content .download-btn {
+  width: 100%;
+  background-color: #f4bfbf;
+  color: #fff;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgb(22, 22, 22);
+  margin: 25px 0 10px;
+  text-transform: uppercase;
+}
