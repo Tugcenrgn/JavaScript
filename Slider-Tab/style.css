@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: rgb(101, 33, 190);
+}
+
+.wrapper {
+  position: relative;
+  padding: 35px;
+  background-color: #fff;
+  max-width: 1000px;
+  border-radius: 30px;
+  box-shadow: 0 5px 5px rgba(34, 0, 66, 0.473);
+  overflow-x: hidden;
+}
+.wrapper .icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.icon:first-child {
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #fff 70%, transparent);
+}
+.icon:last-child {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+
+.icon i {
+    
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+}
+
+.icon i:hover{
+    background: rgb(180, 180, 180);
+    transition: 1s;
+}
+
+.icon:first-child i{
+    margin-left: 15px;
+}
+.icon:last-child i{
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.wrapper .tabs-box {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  overflow-x: hidden;
+  /* I put the overflow-x here because of the dragging function */
+  scroll-behavior: smooth;
+}
+
+/* It was done this way because the dragging function does not work when smooth is added. */
+.tabs-box.dragging{
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+
+.tabs-box .tab {
+  cursor: pointer;
+  font-size: 1.18rem;
+  white-space: nowrap;
+  color:rgb(54, 54, 54);
+  background-color: rgba(64, 0, 148, 0.137);
+  box-shadow: rgba(64, 0, 148, 0.17) 0px -23px 25px 0px inset, rgba(64, 0, 148, 0.15) 0px -36px 30px 0px inset, rgba(64, 0, 148, 0.1) 0px -79px 40px 0px inset;
+  margin: 5px 0;
+  padding: 13px 20px;
+  border-radius: 30px;
+}
+
+.tabs-box.dragging .tab{
+    user-select: none;
+    pointer-events: none;
+}
+
+.tabs-box .tab.active{
+    color:rgb(255, 255, 255);
+    background:rgb(111, 0, 255);
+    border-color: transparent;
+    transition: .7s;
+    
+}
